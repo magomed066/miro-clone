@@ -1,8 +1,8 @@
 'use client'
 
+import { OrganizationSwitcherFeature } from '@/features'
 import { cn } from '@/lib/utils'
 import { Button } from '@/shared/ui'
-import { OrganizationSwitcher } from '@clerk/nextjs'
 import { LayoutDashboard, Star } from 'lucide-react'
 import { Poppins } from 'next/font/google'
 import Image from 'next/image'
@@ -27,26 +27,7 @@ export const OrgSidebar = () => {
 				</div>
 			</Link>
 
-			<OrganizationSwitcher
-				hidePersonal
-				appearance={{
-					elements: {
-						rootBox: {
-							display: 'flex',
-							justifyContent: 'center',
-							alignItems: 'center',
-							width: '100%',
-						},
-						organizationSwitcherTrigger: {
-							padding: '6px',
-							width: '100%',
-							borderRadius: '8px',
-							border: '1px solid #e5e7eb',
-							justifyContent: 'space-between',
-						},
-					},
-				}}
-			/>
+			<OrganizationSwitcherFeature />
 
 			<div className="space-y-1 w-full">
 				<Button
