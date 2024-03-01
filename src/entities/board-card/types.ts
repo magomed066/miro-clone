@@ -10,4 +10,5 @@ export type Props = {
 	createdAt: number
 	userId?: string | null
 	isFavorite: boolean
+	actions?: ReactNode
 }
