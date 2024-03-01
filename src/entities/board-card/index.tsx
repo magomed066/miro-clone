@@ -17,6 +17,7 @@ export const BoardCard = ({
 	userId,
 	createdAt,
 	isFavorite,
+	actions,
 }: Props) => {
 	const authorLabel = userId === authorId ? 'You' : authorName
 	const date = formatDistanceToNow(createdAt, { addSuffix: true })
@@ -28,6 +29,8 @@ export const BoardCard = ({
 					<Image src={imageUrl} alt={title} fill className="object-fit" />
 
 					<Overlay />
+
+					{actions}
 				</div>
 
 				<Footer
