@@ -11,7 +11,10 @@ import { BoardActionsFeature } from '@/features/board-actions'
 import { MoreHorizontal } from 'lucide-react'
 
 export const BoardsListWidget: FC<Props> = ({ organizationId, query }) => {
-	const data = useQuery(api.boards.getBoards, { orgId: organizationId })
+	const data = useQuery(api.boards.getBoards, {
+		orgId: organizationId,
+		...query,
+	})
 	const { userId } = useAuth()
 
 	if (data === undefined) {
