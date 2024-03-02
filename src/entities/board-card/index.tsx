@@ -18,6 +18,7 @@ export const BoardCard = ({
 	createdAt,
 	isFavorite,
 	actions,
+	favoriteAction,
 }: Props) => {
 	const authorLabel = userId === authorId ? 'You' : authorName
 	const date = formatDistanceToNow(createdAt, { addSuffix: true })
@@ -34,6 +35,7 @@ export const BoardCard = ({
 				</div>
 
 				<Footer
+					favoriteAction={favoriteAction}
 					isFavorite={isFavorite}
 					title={title}
 					author={authorLabel}

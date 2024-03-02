@@ -6,7 +6,7 @@ import { BoardCard, EmptyBoards, EmptyFavorites, EmptySearch } from '@/entities'
 import { useQuery } from 'convex/react'
 import { api } from '../../../convex/_generated/api'
 import { useAuth } from '@clerk/nextjs'
-import { NewBoardButtonFeature } from '@/features'
+import { AddBoardToFavoriteFeature, NewBoardButtonFeature } from '@/features'
 import { BoardActionsFeature } from '@/features/board-actions'
 import { MoreHorizontal } from 'lucide-react'
 
@@ -65,6 +65,14 @@ export const BoardsListWidget: FC<Props> = ({ organizationId, query }) => {
 						userId={userId}
 						createdAt={el._creationTime}
 						isFavorite={false}
+						favoriteAction={
+							<AddBoardToFavoriteFeature
+								userId={userId}
+								boardId={el._id}
+								orgId={el.orgId}
+								isFavorite={el.isFavorite}
+							/>
+						}
 						actions={
 							<BoardActionsFeature side="right" id={el._id} title={el.title}>
 								<button className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity px-3 py-2 outline-none">
