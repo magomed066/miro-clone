@@ -11,4 +11,5 @@ export type Props = {
 	userId?: string | null
 	isFavorite: boolean
 	actions?: ReactNode
+	favoriteAction?: ReactNode
 }
