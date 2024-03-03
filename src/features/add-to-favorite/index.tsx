@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@/lib/utils'
+import { cn } from '@/shared/lib/utils'
 import { Star } from 'lucide-react'
 import React, { FC, MouseEvent } from 'react'
 import { Props } from './types'

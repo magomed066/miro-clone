@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Props } from './types'
 import Image from 'next/image'
-import { cn } from '@/lib/utils'
+import { cn } from '@/shared/lib/utils'
 import { Hint } from '@/shared/ui'
 
 export const OrganizationItem: FC<Props> = ({

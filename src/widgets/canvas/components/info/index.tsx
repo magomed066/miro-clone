@@ -1,3 +1,4 @@
+'use client'
 import React, { FC } from 'react'
 import { CanvasInfo, CanvasInfoSkeleton } from '@/entities'
 import { Props } from './types'
@@ -9,7 +10,7 @@ import { BoardActionsFeature } from '@/features/board-actions'
 import { Button, Hint } from '@/shared/ui'
 import { Menu } from 'lucide-react'
 
-export const Info: FC<Props> = ({ boardId }) => {
+export const InfoWidget: FC<Props> = ({ boardId }) => {
 	const data = useQuery(api.board.get, {
 		id: boardId as Id<'boards'>,
 	})

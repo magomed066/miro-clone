@@ -1,7 +1,7 @@
 'use client'
 
 import { OrganizationSwitcherFeature } from '@/features'
-import { cn } from '@/lib/utils'
+import { cn } from '@/shared/lib/utils'
 import { Button } from '@/shared/ui'
 import { LayoutDashboard, Star } from 'lucide-react'
 import { Poppins } from 'next/font/google'
