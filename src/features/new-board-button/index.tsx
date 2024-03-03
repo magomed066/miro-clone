@@ -1,7 +1,7 @@
 'use client'
 import React, { FC } from 'react'
 import { Props } from './types'
-import { cn } from '@/lib/utils'
+import { cn } from '@/shared/lib/utils'
 import { Plus } from 'lucide-react'
 import { useApiMutation } from '@/shared/hooks'
 import { api } from '../../../convex/_generated/api'

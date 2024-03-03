@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 
 export const Toolbar = () => {
@@ -18,7 +20,7 @@ export const Toolbar = () => {
 	)
 }
 
-Toolbar.Skeleton = function ToolbarSkeleton() {
+export const ToolbarSkeleton = () => {
 	return (
 		<div className="absolute top-[50%] -translate-y-[50%] left-2 flex flex-col w-[52px] bg-white shadow-md rounded-md gap-y-4 h-[360px]" />
 	)

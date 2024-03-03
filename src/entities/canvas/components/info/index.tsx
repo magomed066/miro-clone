@@ -3,7 +3,7 @@ import { Props } from './types'
 import { Poppins } from 'next/font/google'
 import Image from 'next/image'
 import { Button, Hint } from '@/shared/ui'
-import { cn } from '@/lib/utils'
+import { cn } from '@/shared/lib/utils'
 import Link from 'next/link'
 
 const font = Poppins({
