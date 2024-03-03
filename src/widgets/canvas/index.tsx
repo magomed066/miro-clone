@@ -1,8 +1,8 @@
 'use client'
-import { Toolbar } from '@/entities'
 import React, { FC } from 'react'
 import { InfoWidget } from './components'
 import { ParticipantsWidget } from './components/participants'
+import { CanvasToolbarFeature } from '@/features'
 
 type Props = {
 	boardId: string
@@ -14,7 +14,7 @@ export const CanvasWidget: FC<Props> = ({ boardId }) => {
 			<InfoWidget boardId={boardId} />
 			<ParticipantsWidget />
 
-			<Toolbar />
+			<CanvasToolbarFeature />
 		</main>
 	)
 }
